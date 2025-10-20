@@ -29,7 +29,7 @@
         }
 
         .nav-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -66,7 +66,7 @@
 
         /* Main Container */
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
         }
@@ -78,6 +78,7 @@
             margin: 2rem 0;
             padding: 2rem 0;
             border-bottom: 1px solid #ddd;
+            align-items: flex-start;
         }
 
         .profile-photo {
@@ -85,14 +86,15 @@
         }
 
         .profile-photo img {
-            width: 800px;
-            height: 600px;
+            width: 350px;
+            height: 280px;
             object-fit: cover;
             border: 2px solid #333;
         }
 
         .profile-content {
             flex: 1;
+            min-width: 0;
         }
 
         .profile-content h1 {
@@ -174,24 +176,30 @@
         /* Visualization Gallery */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
             margin-top: 1rem;
         }
-
+        
         .gallery-item {
             border: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
         }
-
+        
         .gallery-item img {
             width: 100%;
-            height: 500px;
-            object-fit: cover;
+            height: auto;
+            min-height: 300px;
+            max-height: 500px;
+            object-fit: contain;
+            background-color: #f9f9f9;
             border-bottom: 1px solid #ddd;
         }
-
+        
         .gallery-content {
             padding: 1rem;
+            flex-grow: 1;
         }
 
         .gallery-title {
@@ -237,6 +245,19 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .profile-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-photo img {
+                width: 300px;
+                height: 240px;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
@@ -247,13 +268,9 @@
                 gap: 1rem;
             }
 
-            .profile-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .profile-photo {
-                align-self: center;
+            .profile-photo img {
+                width: 250px;
+                height: 200px;
             }
 
             .profile-content h1 {
@@ -351,7 +368,7 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="images/visualizations/US GDP 2008.jpg" alt="US GDP 2008" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img src="images/visualizations/US GDP 2008.jpg" alt="US GDP 2008">
                     <div class="gallery-content">
                         <div class="gallery-title">Living Standard in United States after 2008</div>
                         <div class="gallery-description">The 2008 Financial Crisis impacted the living standards in United States permanently.</div>
@@ -359,7 +376,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="images/visualizations/Bubble Graph.jpg" alt="Bubble Graph" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img src="images/visualizations/Bubble Graph.jpg" alt="Bubble Graph">
                     <div class="gallery-content">
                         <div class="gallery-title">"Too Rich to Recover"</div>
                         <div class="gallery-description">A negative correlation between a country's pre-crisis wealth and its post-crisis recovery level.</div>
@@ -367,7 +384,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="images/visualizations/Poverty Rate.png" alt="Poverty Rate in New York" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img src="images/visualizations/Poverty Rate.png" alt="Poverty Rate in New York">
                     <div class="gallery-content">
                         <div class="gallery-title">Poverty Rate in New York</div>
                         <div class="gallery-description">Percent of population with income below the poverty line.</div>
@@ -375,7 +392,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <img src="images/visualizations/Asthma.png" alt="Asthma Burden in New York" style="width: 100%; height: 200px; object-fit: cover;">
+                    <img src="images/visualizations/Asthma.png" alt="Asthma Burden in New York">
                     <div class="gallery-content">
                         <div class="gallery-title">Asthma Burden in New York</div>
                         <div class="gallery-description">Asthma emergency department visits & discharges per 10,000 population.</div>
@@ -394,7 +411,7 @@
                 </div>
                 <div class="contact-item">
                     <h4>GitHub</h4>
-                    <a href="https://github.com/yourusername" target="_blank">github.com/shiping-liu</a>
+                    <a href="https://github.com/shiping-liu" target="_blank">github.com/shiping-liu</a>
                 </div>
                 <div class="contact-item">
                     <h4>Institution</h4>
