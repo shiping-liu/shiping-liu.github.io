@@ -91,19 +91,6 @@
             border: 2px solid #333;
         }
 
-        .profile-placeholder {
-            width: 200px;
-            height: 250px;
-            border: 2px solid #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f5f5f5;
-            color: #666;
-            font-size: 0.9rem;
-            text-align: center;
-        }
-
         .profile-content {
             flex: 1;
         }
@@ -142,13 +129,6 @@
             margin-bottom: 1rem;
             border-bottom: 1px solid #333;
             padding-bottom: 0.5rem;
-        }
-
-        .section h3 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin: 1.5rem 0 1rem 0;
         }
 
         /* Research Papers */
@@ -191,25 +171,6 @@
             color: white;
         }
 
-        /* Research Interests */
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .interest-item {
-            border: 1px solid #ddd;
-            padding: 1rem;
-        }
-
-        .interest-item h4 {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-
         /* Visualization Gallery */
         .gallery-grid {
             display: grid;
@@ -222,15 +183,10 @@
             border: 1px solid #ddd;
         }
 
-        .gallery-image {
+        .gallery-item img {
             width: 100%;
-            height: 150px;
-            background-color: #f5f5f5;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 0.9rem;
+            height: 200px;
+            object-fit: cover;
             border-bottom: 1px solid #ddd;
         }
 
@@ -333,14 +289,7 @@
         <!-- Profile Section -->
         <section class="profile-section">
             <div class="profile-photo">
-                <!-- Replace 'your-photo.jpg' with your actual photo file -->
-                <!-- <img src="your-photo.jpg" alt="Shiping Liu"> -->
-                
-                <!-- Placeholder - remove this div when you add your photo -->
-                <div class="profile-placeholder">
-                    Your Photo Here<br>
-                    (200×250px)
-                </div>
+                <img src="images/profile/Profile.HEIC" alt="Shiping Liu">
             </div>
             <div class="profile-content">
                 <h1>Shiping Liu</h1>
@@ -349,7 +298,7 @@
             </div>
         </section>
 
-<!-- Research Section -->
+        <!-- Research Section -->
         <section id="research" class="section">
             <h2>Research</h2>
             
@@ -357,7 +306,6 @@
                 <div class="paper-title">Air Pollution and Location of EV Charging Stations</div>
                 <div class="paper-year">(Oct 2025 – Present)</div>
                 <div class="paper-description">Designed GIS-based methodology for analyzing EV charging station optimization in NYC using Pigouvian tax theory. Built a web scraper to collect geographic coordinates of EV charging stations in NYC from online databases.</div>
-                <!-- PDF link will be added when available -->
             </div>
 
             <div class="paper-item">
@@ -403,15 +351,15 @@
             
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <div class="gallery-image">Living Stantard in United States after 2008</div>
+                    <img src="images/visualizations/US GDP 2008.jpg" alt="US GDP 2008" style="width: 100%; height: 200px; object-fit: cover;">
                     <div class="gallery-content">
-                        <div class="gallery-title">Living Stantard in United States after 2008</div>
+                        <div class="gallery-title">Living Standard in United States after 2008</div>
                         <div class="gallery-description">The 2008 Financial Crisis impacted the living standards in United States permanently.</div>
                     </div>
                 </div>
 
                 <div class="gallery-item">
-                    <div class="gallery-image">"Too Rich to Recover"</div>
+                    <img src="images/visualizations/Bubble Graph.jpg" alt="Bubble Graph" style="width: 100%; height: 200px; object-fit: cover;">
                     <div class="gallery-content">
                         <div class="gallery-title">"Too Rich to Recover"</div>
                         <div class="gallery-description">A negative correlation between a country's pre-crisis wealth and its post-crisis recovery level.</div>
@@ -419,7 +367,7 @@
                 </div>
 
                 <div class="gallery-item">
-                    <div class="gallery-image">Poverty Rate in New York</div>
+                    <img src="images/visualizations/Poverty Rate.png" alt="Poverty Rate in New York" style="width: 100%; height: 200px; object-fit: cover;">
                     <div class="gallery-content">
                         <div class="gallery-title">Poverty Rate in New York</div>
                         <div class="gallery-description">Percent of population with income below the poverty line.</div>
@@ -427,12 +375,13 @@
                 </div>
 
                 <div class="gallery-item">
-                    <div class="gallery-image">Asthma Burden in New York</div>
+                    <img src="images/visualizations/Asthma.png" alt="Asthma Burden in New York" style="width: 100%; height: 200px; object-fit: cover;">
                     <div class="gallery-content">
-                        <div class="gallery-title">Range Anxiety and Mobility Decisions</div>
+                        <div class="gallery-title">Asthma Burden in New York</div>
                         <div class="gallery-description">Asthma emergency department visits & discharges per 10,000 population.</div>
                     </div>
                 </div>
+            </div>
         </section>
 
         <!-- Contact Section -->
