@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiping Liu - Economics Research</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,25 +12,24 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #2d3748;
-            background-color: #f8fafc;
+            color: #333;
+            background-color: #fff;
         }
 
-        /* Header and Navigation */
+        /* Header */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
+            background-color: #fff;
+            border-bottom: 2px solid #333;
+            padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -40,14 +38,14 @@
         }
 
         .logo h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
         }
 
         .logo p {
-            font-size: 0.95rem;
-            opacity: 0.9;
+            font-size: 0.9rem;
+            color: #666;
         }
 
         .nav-links {
@@ -57,140 +55,158 @@
         }
 
         .nav-links a {
-            color: white;
+            color: #333;
             text-decoration: none;
-            font-weight: 500;
-            transition: opacity 0.3s;
+            font-weight: normal;
         }
 
         .nav-links a:hover {
-            opacity: 0.8;
+            text-decoration: underline;
         }
 
         /* Main Container */
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        /* Hero Section */
-        .hero {
-            background: white;
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            gap: 3rem;
             margin: 2rem 0;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 2rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
+        }
+
+        .profile-photo img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid #333;
+        }
+
+        .profile-placeholder {
+            width: 200px;
+            height: 250px;
+            border: 2px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            color: #666;
+            font-size: 0.9rem;
             text-align: center;
         }
 
-        .hero h2 {
-            font-size: 2.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #1a202c;
+        .profile-content {
+            flex: 1;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            color: #4a5568;
-            max-width: 600px;
-            margin: 0 auto;
+        .profile-content h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        .profile-content .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .profile-content p {
+            margin-bottom: 1rem;
         }
 
         /* Section Styling */
         .section {
-            background: white;
             margin: 2rem 0;
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .section:last-child {
+            border-bottom: none;
         }
 
         .section h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #333;
             padding-bottom: 0.5rem;
-            border-bottom: 3px solid #667eea;
         }
 
         .section h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #4a5568;
-            margin: 2rem 0 1rem 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin: 1.5rem 0 1rem 0;
         }
 
         /* Research Papers */
         .paper-item {
-            background: #f7fafc;
-            padding: 1.5rem;
             margin: 1rem 0;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .paper-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            padding: 1rem;
+            border: 1px solid #ddd;
         }
 
         .paper-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.25rem;
         }
 
         .paper-year {
-            color: #718096;
+            color: #666;
             font-size: 0.9rem;
+            margin-bottom: 0.5rem;
         }
 
         .paper-description {
-            color: #4a5568;
+            color: #555;
             font-style: italic;
-            margin: 0.5rem 0;
+            margin-bottom: 0.5rem;
         }
 
         .paper-link {
             display: inline-block;
-            background: #667eea;
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 6px;
+            color: #0066cc;
             text-decoration: none;
+            border: 1px solid #0066cc;
+            padding: 0.25rem 0.75rem;
             font-size: 0.9rem;
-            font-weight: 500;
-            transition: background 0.3s;
-            margin-top: 0.5rem;
         }
 
         .paper-link:hover {
-            background: #5a67d8;
+            background-color: #0066cc;
+            color: white;
         }
 
         /* Research Interests */
         .interests-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
             margin-top: 1rem;
         }
 
-        .interest-card {
-            background: #f7fafc;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-top: 3px solid #667eea;
+        .interest-item {
+            border: 1px solid #ddd;
+            padding: 1rem;
         }
 
-        .interest-card h4 {
-            font-weight: 600;
-            color: #2d3748;
+        .interest-item h4 {
+            font-weight: bold;
+            color: #333;
             margin-bottom: 0.5rem;
         }
 
@@ -198,72 +214,57 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 1.5rem;
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
 
         .gallery-item {
-            background: #f7fafc;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            border: 1px solid #ddd;
         }
 
         .gallery-image {
             width: 100%;
-            height: 200px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            height: 150px;
+            background-color: #f5f5f5;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.1rem;
-            font-weight: 500;
+            color: #666;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #ddd;
         }
 
         .gallery-content {
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .gallery-title {
-            font-weight: 600;
-            color: #2d3748;
+            font-weight: bold;
+            color: #333;
             margin-bottom: 0.5rem;
         }
 
         .gallery-description {
-            color: #4a5568;
-            font-size: 0.95rem;
+            color: #555;
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
-        .contact-info {
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: #f7fafc;
-            border-radius: 8px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
         }
 
         .contact-item h4 {
-            color: #2d3748;
+            color: #333;
             margin-bottom: 0.5rem;
         }
 
         .contact-item a {
-            color: #667eea;
+            color: #0066cc;
             text-decoration: none;
-            font-weight: 500;
         }
 
         .contact-item a:hover {
@@ -272,11 +273,11 @@
 
         /* Footer */
         .footer {
-            background: #2d3748;
-            color: white;
+            background-color: #f5f5f5;
             text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 1px solid #ddd;
         }
 
         /* Responsive Design */
@@ -290,12 +291,17 @@
                 gap: 1rem;
             }
 
-            .hero h2 {
-                font-size: 2rem;
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
             }
 
-            .section {
-                padding: 1.5rem;
+            .profile-photo {
+                align-self: center;
+            }
+
+            .profile-content h1 {
+                font-size: 1.5rem;
             }
 
             .gallery-grid {
@@ -316,7 +322,7 @@
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
                     <li><a href="#research">Research</a></li>
-                    <li><a href="#visualizations">Visualizations</a></li>
+                    <li><a href="#visualizations">Data Visualizations</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -324,32 +330,43 @@
     </header>
 
     <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h2>Welcome to My Research</h2>
-            <p>Exploring macroeconomic patterns, policy impacts, and behavioral economics through rigorous empirical analysis and innovative methodological approaches.</p>
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-photo">
+                <!-- Replace 'your-photo.jpg' with your actual photo file -->
+                <!-- <img src="your-photo.jpg" alt="Shiping Liu"> -->
+                
+                <!-- Placeholder - remove this div when you add your photo -->
+                <div class="profile-placeholder">
+                    Your Photo Here<br>
+                    (200×250px)
+                </div>
+            </div>
+            <div class="profile-content">
+                <h1>Shiping Liu</h1>
+                <p class="subtitle">Economics Researcher</p>
+                <p>Welcome to my academic website. I am an economics researcher interested in macroeconomics, econometrics, and policy analysis. My work spans crisis forecasting, economic convergence, and the behavioral aspects of economic decision-making.</p>
+                <p>I employ both traditional econometric methods and modern computational approaches to understand complex economic phenomena, with a particular focus on causal inference and policy evaluation.</p>
+            </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>I am an economics researcher with a focus on macroeconomics, econometrics, and policy analysis. My work spans crisis forecasting, economic convergence, and the behavioral aspects of economic decision-making. I employ both traditional econometric methods and modern computational approaches to understand complex economic phenomena.</p>
-            
-            <h3>Research Interests</h3>
+            <h2>Research Interests</h2>
             <div class="interests-grid">
-                <div class="interest-card">
+                <div class="interest-item">
                     <h4>Macroeconomic Forecasting</h4>
                     <p>Crisis prediction models and economic convergence analysis</p>
                 </div>
-                <div class="interest-card">
+                <div class="interest-item">
                     <h4>Policy Analysis</h4>
                     <p>Education policy impacts and gender disparity studies</p>
                 </div>
-                <div class="interest-card">
+                <div class="interest-item">
                     <h4>Behavioral Economics</h4>
                     <p>Consumer behavior in technology adoption and decision-making</p>
                 </div>
-                <div class="interest-card">
+                <div class="interest-item">
                     <h4>Applied Econometrics</h4>
                     <p>Causal inference and regression discontinuity designs</p>
                 </div>
@@ -407,9 +424,9 @@
             </div>
         </section>
 
-        <!-- Visualizations Section -->
+        <!-- Data Visualizations Section -->
         <section id="visualizations" class="section">
-            <h2>Research Visualizations</h2>
+            <h2>Data Visualizations</h2>
             <p>Visual representations of key findings from my economic research projects.</p>
             
             <div class="gallery-grid">
@@ -466,7 +483,7 @@
         <!-- Contact Section -->
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <div class="contact-info">
+            <div class="contact-grid">
                 <div class="contact-item">
                     <h4>Email</h4>
                     <a href="mailto:sliu293@jh.edu">sliu293@jh.edu</a>
@@ -501,18 +518,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(102, 126, 234, 0.95)';
-                header.style.backdropFilter = 'blur(10px)';
-            } else {
-                header.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
-                header.style.backdropFilter = 'none';
-            }
         });
     </script>
 </body>
